@@ -74,11 +74,6 @@ public List<Student> searchStudentList(){
   }
   @Transactional
   public void updateStudent(StudentDetail studentDetail){
-    System.out.println("★★ updateStudent 呼び出されました ★★");
-    System.out.println("ID: " + studentDetail.getStudent().getId());
-    System.out.println("名前: " + studentDetail.getStudent().getName());
-    repository.updateStudent(studentDetail.getStudent());
-    // TODO:コース情報登録も行う。
     for(StudentsCourses studentsCourses : studentDetail.getStudentsCourses()){
       studentsCourses.setStudentId(studentDetail.getStudent().getId());
       repository.updateStudentsCourses(studentsCourses);
