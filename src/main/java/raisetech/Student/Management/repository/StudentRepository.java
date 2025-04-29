@@ -21,7 +21,8 @@ public interface StudentRepository {
    * 受講生の全件検索を行います。
    * @return 受講生一覧（全件）
    */
-  @Select("SELECT * FROM students")
+
+
   List<Student> search();
 
   /**
@@ -29,7 +30,7 @@ public interface StudentRepository {
    * @param id　受講生ID
    * @return　受講生
    */
-  @Select("SELECT * FROM students WHERE id=#{id}" )
+
   Student searchStudent(String id);
 
   /**
