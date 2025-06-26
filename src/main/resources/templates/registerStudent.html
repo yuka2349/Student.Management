@@ -16,8 +16,8 @@
     <input type="text" id="kanaName" th:field="*{student.kanaName}" required />
   </div>
   <div>
-    <label for="nickName">ニックネーム：</label>
-    <input type="text" id="nickName" th:field="*{student.nickName}" required />
+    <label for="nickname">ニックネーム：</label>
+    <input type="text" id="nickname" th:field="*{student.nickname}" required />
   </div>
   <div>
     <label for="email">メールアドレス：</label>
@@ -29,7 +29,14 @@
   </div>
   <div>
     <label for="age">年齢：</label>
-    <input type="text" id="age" th:field="*{student.age}" />
+    <input
+        type="number"
+        id="age"
+        th:field="*{student.age}"
+        min="0"
+        step="1"
+        required
+    />
   </div>
   <div>
     <label for="sex">性別：</label>
